@@ -35,17 +35,17 @@
         background-color: #f0f0f0;
       }
       
-      ul {
+      ul .navbar {
         margin: 0;
         padding: 0;
       }
       
-      li {
+      li .navbar {
         display: inline-block;
         margin-right: 10px;
       }
       
-      a {
+      a .navbar{
         text-decoration: none;
         color: #000;
       }    
@@ -54,19 +54,36 @@
     <div class="navbar">
         <style>
             .navbar {
-                background-color: #f5f5f5;
-                overflow: hidden;
-            }
-    
-            .navbar a {
-                float: left;
-                color: #000;
-                text-align: center;
-                padding: 12px 12px;
-                text-decoration: underline;
-                font-size: 15px;
-                font-weight: bold;
-            }
+  overflow: hidden;
+  background-color: #f5f5f5;
+  position: absolute;
+  top: 0;
+  width: 25%;
+  scroll-behavior: auto smooth;
+  display: flex;
+  flex-direction: column;
+  right: 0;
+}
+
+.navbar a {
+  float: right;
+  display: block;
+  color: #000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  flex-direction: column;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+/* Main content */
+.main {
+  margin-top: 30px;
+}
         </style>
     </head>
     <body>
@@ -6368,7 +6385,7 @@ int *p = &amp;n;
                       <label>
                         <input type="checkbox" name="918" disabled="disabled" />
                         <p>It’s a cell in an array</p>
-                      </label>
+[O                      </label>
                     </li>
                   </ul>
 
@@ -8056,9 +8073,9 @@ int *p = &amp;n;
             <section class="quiz_questions_show_container" style="display: block;">
               <div class="quiz_question_item_container" data-role="quiz_question698" data-position="5">
                 <div class=" clearfix" id="quiz_question-698">
-OBOBOBOBOBOBOBOBOBOBOBOB
+
                   <h4 class="quiz_question">
-OBOBOB
+
                     Question #0
                   </h4>
 
@@ -8649,7 +8666,7 @@ int *p = &amp;n;
 
                       <label>
                         <input type="radio" name="722" disabled="disabled">
-                        <p>O(2^n)</p>
+[I                        <p>O(2^n)</p>
                       </label>
                     </li>
 
