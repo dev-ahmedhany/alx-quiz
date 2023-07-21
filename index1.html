@@ -31,30 +31,30 @@
 
 <body>
       <style>
-      nav {
+      nav .navbarbg .navbarsm {
         background-color: #f0f0f0;
       }
       
-      ul .navbar {
+      ul .navbarbg .navbarsm {
         margin: 0;
         padding: 0;
       }
       
-      li .navbar {
+      li .navbarbg .navbarsm {
         display: inline-block;
         margin-right: 10px;
       }
       
-      a .navbar{
+      a .navbarbg .navbarsm{
         text-decoration: none;
         color: #000;
       }    
       </style>
   <main>
-            <style>
-            .navbar {
+        <style>
+            .navbarbg {
   overflow: hidden;
-  background-color: #f5f5f5;
+  background-color: #ffffff;
   position: absolute;
   top: 0;
   width: 30%;
@@ -65,9 +65,14 @@
   height: 100%;
   overflow-y: auto;
   overflow-x: auto;
+  @media (min-width: 769px) {
+  .navbarbg {
+    visibility: visible;
+  }
+}
 }
 
-.navbar a {
+.navbarbg a {
   float: right;
   display: block;
   color: #000;
@@ -77,7 +82,7 @@
   flex-direction: column;
 }
 
-.navbar a:hover {
+.navbarbg a:hover {
   background: #ddd;
   color: black;
 }
@@ -86,23 +91,84 @@
 .main {
   margin-top: 30px;
 }
+
+  }
         </style>
+        <style>
+        .navbarsm {
+          background-color: #f0f0f0;
+          overflow: visible;
+          position: sticky;
+          display: block;
+          top: 0px;
+          left: 0px;
+          width: 100%;
+          overflow-y: hidden;
+          overflow-x: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          height: 60px;
+          z-index: 1;
+        }
+        
+        .navbarsm a {
+          float: left;
+          color: #000;
+          text-align: left;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+        }
+        
+        @media (max-width: 768px) {
+          .navbarsm {
+            position: sticky;
+            width: 100%;
+            height: auto;
+            overflow: visible;
+            visibility: visible;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+          
+          .navbarsm a {
+            float: left;
+            text-align: left;
+          }
+        }
+      </style>
     </head>
     <body>
-        <div class="navbar">
+        <div class="navbarbg">
             <script>
                 window.addEventListener('DOMContentLoaded', function() {
-                    var navbar = document.querySelector('.navbar');
+                    var navbarbg = document.querySelector('.navbarbg');
                     var h2Tags = document.querySelectorAll('h2');
     
                     h2Tags.forEach(function(h2, index) {
                         var link = document.createElement('a');
                         link.textContent = h2.textContent;
                         link.href = '#' + h2.id;
-                        navbar.appendChild(link);
+                        navbarbg.appendChild(link);
                     });
                 });
             </script>
+            <div class="navbarsm">
+              <script>
+                  window.addEventListener('DOMContentLoaded', function() {
+                      var navbarsm = document.querySelector('.navbarsm');
+                      var h2Tags = document.querySelectorAll('h2');
+      
+                      h2Tags.forEach(function(h2, index) {
+                          var link = document.createElement('a');
+                          link.textContent = h2.textContent;
+                          link.href = '#' + h2.id;
+                          navbarsm.appendChild(link);
+                      });
+                  });
+              </script>
       </div>
     </div>
     <div class="col-xs-12 col-md-10 col-lg-8 contains-images">
@@ -7172,13 +7238,13 @@ int *p = &amp;n;
                       </label>
                     </li>
 
-OBOBOB                    <li class="">
-OBOBOBOBOBOB                      <label>
+                    <li class="">
+                      <label>
                         <input type="radio" name="72" disabled="disabled" checked="checked" />
-OBOBOB                        <p>0b10001001</p>
+                        <p>0b10001001</p>
                       </label>
                     </li>
-OBOBOB
+
                     <li class="">
                       <label>
                         <input type="radio" name="72" disabled="disabled" />
@@ -7195,12 +7261,12 @@ int *p = &amp;n;
                   <h4 class="quiz_question">Question #18</h4>
 
                   <!-- Quiz question Body -->
-OBOBOB                  <p><code>0x01 | 0x01 =</code> ?</p>
+                  <p><code>0x01 | 0x01 =</code> ?</p>
 
-OBOBOB                  <!-- Quiz question Answers -->
-OBOBOBOBOBOB                  <ul class="quiz_question_answers" data-question-id="57">
+                  <!-- Quiz question Answers -->
+                  <ul class="quiz_question_answers" data-question-id="57">
                     <li class="">
-OBOBOB                      <label>
+                      <label>
                         <input type="radio" name="57" disabled="disabled" />
                         <p><code>0x00</code></p>
                       </label>
@@ -7212,15 +7278,15 @@ int *p = &amp;n;
                         <p><code>0x01</code></p>
                       </label>
                     </li>
-OBOBOB
+
                     <li class="">
                       <label>
-OBOBOB                        <input type="radio" name="57" disabled="disabled" />
-OBOBOB                        <p><code>0x02</code></p>
+                        <input type="radio" name="57" disabled="disabled" />
+                        <p><code>0x02</code></p>
                       </label>
-OBOBOBOBOBOBOBOBOB                    </li>
+                    </li>
                   </ul>
-OBOBOB
+
                   <!-- Quiz question Tips -->
                 </div>
               </div>
@@ -7230,11 +7296,11 @@ int *p = &amp;n;
 
                   <!-- Quiz question Body -->
                   <p>What is <code>0x89</code> in base10?</p>
-OBOBOB
-OBOBOB                  <!-- Quiz question Answers -->
-OBOBOBOBOBOBOBOBOB                  <ul class="quiz_question_answers" data-question-id="71">
+
+                  <!-- Quiz question Answers -->
+                  <ul class="quiz_question_answers" data-question-id="71">
                     <li class="">
-OBOBOB                      <label>
+                      <label>
                         <input type="radio" name="71" disabled="disabled" />
                         <p>139</p>
                       </label>
