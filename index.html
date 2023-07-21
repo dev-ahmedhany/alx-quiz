@@ -32,6 +32,7 @@
 <body>
   <div class="hidden-xs navigation sidebar" style="width: 70px"></div>
   <main>
+    <div class="navbarbg"></div>
     <div class="col-xs-12 col-md-10 col-lg-8 contains-images">
       <div>
         <h2>0x00. C - Hello, World</h2>
@@ -11457,6 +11458,19 @@ int *p = &amp;n;
       </div>
   </main>
   <script>
+    //navbar
+    const headersList = document.getElementsByTagName("h2")
+    var navbarbg = document.querySelector('.navbarbg');
+    for(let i=0;i<headersList.length;i++){
+      const h2 = headersList[i]
+      h2.id =h2.textContent.replace(/ /g,"_")
+      const link = document.createElement('a');
+      link.textContent =h2.textContent;
+      link.href = '#' + h2.id;
+      navbarbg.appendChild(link);
+    }
+
+    //readonly
     const list = document.getElementsByTagName("input")
     for(let i=0;i<list.length;i++){
       list[i].onclick = function(e){
